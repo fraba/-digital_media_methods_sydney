@@ -4,7 +4,7 @@
 
 ## How-to
 
-*If you have any problem with the following instruction please email me (francesco.bailo@sydney.edu.au). Your problems can also be somebody else's problems!*
+*If you have any problem with the following instructions please email me (francesco.bailo@sydney.edu.au). Your problems can also be somebody else's problems!*
 
 ### Install R
 
