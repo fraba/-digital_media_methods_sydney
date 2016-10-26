@@ -10,15 +10,58 @@
 
 #### For Windows
 
+If you have a Windows computer, you need to download and install [this file](https://cran.rstudio.com/bin/windows/base/R-3.3.1-win.exe). 
+
 #### For Mac OS X
 
-If you have a Mac, you first need to understand which version of OS X you have. You should be able to get it by clicking the Apple logo in the top-left corner of your screen and then on `About This Mac`.
+If you have a Mac, you need first to understand which version of OS X you have. You should be able to get it by clicking the Apple logo in the top-left corner of your screen and then on `About This Mac`.
 
 ![alt tag](https://cdn2.macworld.co.uk/cmsdata/features/3612428/About-this-mac.jpg)
 
+* If your version number begins with `10.6`, `10.7` or `10.8` you need to download and install [this file](https://cran.rstudio.com/bin/macosx/R-3.2.1-snowleopard.pkg).
+
+* If your version number begins with `10.9`, `10.10` or `10.11` you need to download and install [this file](https://cran.rstudio.com/bin/macosx/R-3.3.1.pkg).
+
+#### For Linux
+
+If you are running Linux, I'm sure you don't need any instructions.
 
 ### Install RStudio Desktop
 
 *RStudio requires R. Before proceeding you need to make sure you have R installed (as explained in the previous section)*
 
+#### For Windows
 
+If you have a Windows computer, you need to download and install [this file](https://download1.rstudio.org/RStudio-0.99.903.exe).
+
+#### For Mac OS X
+
+If you have a Mac, you need to download and install [this file](https://download1.rstudio.org/RStudio-0.99.903.dmg).
+
+## Getting started with R and RStudio
+
+If you have successfully installed R and RStudio, have a look at this two video for a short introduction to R and RStudio. At the end you should be able to
+
+* Open a code file, 
+* Load data through the RStudio interface,
+* Highlight a line in the code, 
+* Execute highlighted lines by clicking
+
+and be more or less familiar with the interface of RStudio
+
+* where the code is,
+* where is the console/output,
+* where are the variables loaded in memory.
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=lVKMsaWju8w
+" target="_blank"><img src="http://img.youtube.com/vi/lVKMsaWju8w/0.jpg" 
+alt="Getting started with R and RStudio" width="240" height="180" border="10" /></a>
+
+<a href="http://www.youtube.com/watch?feature=player_embedded&v=UYclmg1_KLk
+" target="_blank"><img src="http://img.youtube.com/vi/UYclmg1_KLk/0.jpg" 
+alt="Introduction to R Programming: Getting Started With R (R Tutorial 1.1)" width="240" height="180" border="10" /></a>
+
+## Resources
+
+* [The R Project](https://www.r-project.org/)
+* [RStudio](https://www.rstudio.com/)
