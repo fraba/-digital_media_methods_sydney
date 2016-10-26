@@ -1,6 +1,6 @@
 # Repository for Digital media methods (The University of Sydney)
 
-*We will keep updating this page, so keep come back...*
+*We will keep updating this page, so keep coming back...*
 
 ## How-to
 
