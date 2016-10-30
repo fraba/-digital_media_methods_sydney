@@ -1,7 +1,3 @@
----
-title: Repository for Digital media methods
----
-
 # Repository for Digital media methods (The University of Sydney)
 
 *We will keep updating this repository, so keep coming back...*
