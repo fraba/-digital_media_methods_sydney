@@ -1,56 +1,48 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-  <meta http-equiv="Content-Style-Type" content="text/css" />
-  <meta name="generator" content="pandoc" />
-  <title></title>
-  <style type="text/css">code{white-space: pre;}</style>
+  <title>Getting started with R and RStudio</title>
+  <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
 <h1>Getting started with R and RStudio</h1>
-<p><em>If you have any problem with the following instructions please email<br />me\<br />(<script type="text/javascript">
-<!--
-h='&#x73;&#x79;&#100;&#110;&#x65;&#x79;&#46;&#x65;&#100;&#x75;&#46;&#x61;&#x75;';a='&#64;';n='&#102;&#114;&#x61;&#110;&#x63;&#x65;&#x73;&#x63;&#x6f;&#46;&#98;&#x61;&#x69;&#108;&#x6f;';e=n+a+h;
-document.write('<a h'+'ref'+'="ma'+'ilto'+':'+e+'">'+e+'<\/'+'a'+'>');
-// -->
-</script><noscript>&#102;&#114;&#x61;&#110;&#x63;&#x65;&#x73;&#x63;&#x6f;&#46;&#98;&#x61;&#x69;&#108;&#x6f;&#32;&#x61;&#116;&#32;&#x73;&#x79;&#100;&#110;&#x65;&#x79;&#32;&#100;&#x6f;&#116;&#32;&#x65;&#100;&#x75;&#32;&#100;&#x6f;&#116;&#32;&#x61;&#x75;</noscript>). Your problems can also be somebody\<br />else's problems!</em></p>
+<p><em>If you have any problem with the following instructions please email <a href="mailto:francesco.bailo@sydney.edu.au">me</a>. Your problems can also be somebody else's problems!</em></p>
 <h2>Why should I bother learning R?</h2>
-<p><em>If you already know why you want to learn R (or you just blindly trust\<br />us), you might want to skip this section and start <a href="#install-r">installing\<br />R</a>.</em></p>
-<p>R is a programming language dedicated to statistical analysis and\<br />graphics. As all programming language is hard since must be understood\<br />unambiguously by a machine (as well as by the human being in charge of\<br />writing in the language). This means, that if you start today to learn\<br />it and if you have no other experience with other computer languages,<br />it\<br />will take some effort to get the first results.</p>
+<p><em>If you already know why you want to learn R (or you just blindly trust us), you might want to skip this section and start <a href="#install-r">installing R</a>.</em></p>
+<p>R is a programming language dedicated to statistical analysis and graphics. As all programming language is hard since must be understood unambiguously by a machine (as well as by the human being in charge of writing in the language). This means, that if you start today to learn it and if you have no other experience with other computer languages, it will take some effort to get the first results.</p>
 <p>So, why you might want to invest time and effort in it?</p>
-<p>The short answer is <em>data</em>. If you are working in the humanities or\<br />social sciences,</p>
+<p>The short answer is <em>data</em>. If you are working in the humanities or social sciences,</p>
 <h3>OK, but what about RStudio?</h3>
-<h2>Install R</h2>
+<h2 name="#install-r">Install R</h2>
 <h3>For Windows</h3>
-<p>If you have a Windows computer, you need to download and install <a href="https://cran.rstudio.com/bin/windows/base/R-3.3.1-win.exe">this\<br />file</a>.</p>
+<p>If you have a Windows computer, you need to download and install <a href="https://cran.rstudio.com/bin/windows/base/R-3.3.1-win.exe">this file</a>.</p>
 <h3>For Mac OS X</h3>
-<p>If you have a Mac, you need first to understand which version of OS X\<br />you have. You should be able to get it by clicking the Apple logo in<br />the\<br />top-left corner of your screen and then on <code>About This Mac</code>.</p>
+<p>If you have a Mac, you need first to understand which version of OS X you have. You should be able to get it by clicking the Apple logo in the top-left corner of your screen and then on <code>About This Mac</code>.</p>
 <p><img src="https://cdn2.macworld.co.uk/cmsdata/features/3612428/About-this-mac.jpg" alt="about-this-mac" /></p>
 <ul>
-<li><p>If your version number begins with <code>10.6</code>, <code>10.7</code> or <code>10.8</code> you<br /> need\<br /> to download and install <a href="https://cran.rstudio.com/bin/macosx/R-3.2.1-snowleopard.pkg">this\<br /> file</a>.</p></li>
-<li><p>If your version number begins with <code>10.9</code>, <code>10.10</code> or <code>10.11</code> you\<br /> need to download and install <a href="https://cran.rstudio.com/bin/macosx/R-3.3.1.pkg">this\<br /> file</a>.</p></li>
+<li><p>If your version number begins with <code>10.6</code>, <code>10.7</code> or <code>10.8</code> you  need  to download and install <a href="https://cran.rstudio.com/bin/macosx/R-3.2.1-snowleopard.pkg">this  file</a>.</p></li>
+<li><p>If your version number begins with <code>10.9</code>, <code>10.10</code> or <code>10.11</code> you  need to download and install <a href="https://cran.rstudio.com/bin/macosx/R-3.3.1.pkg">this  file</a>.</p></li>
 </ul>
 <h3>For Linux</h3>
 <p>If you are running Linux, I'm sure you don't need any instructions.</p>
 <h2>Install RStudio Desktop</h2>
-<p><em>RStudio requires R. Before proceeding you need to make sure you have R\<br />installed (as explained in the previous section)</em></p>
+<p><em>RStudio requires R. Before proceeding you need to make sure you have R installed (as explained in the previous section)</em></p>
 <h3>For Windows</h3>
-<p>If you have a Windows computer, you need to download and install <a href="https://download1.rstudio.org/RStudio-0.99.903.exe">this\<br />file</a>.</p>
+<p>If you have a Windows computer, you need to download and install <a href="https://download1.rstudio.org/RStudio-0.99.903.exe">this file</a>.</p>
 <h3>For Mac OS X</h3>
-<p>If you have a Mac, you need to download and install <a href="https://download1.rstudio.org/RStudio-0.99.903.dmg">this\<br />file</a>.</p>
+<p>If you have a Mac, you need to download and install <a href="https://download1.rstudio.org/RStudio-0.99.903.dmg">this file</a>.</p>
 <h1>Getting started with R and RStudio</h1>
-<p>If you have successfully installed R and RStudio, have a look at this\<br />two video for a short introduction to R and RStudio. At the end you\<br />should be able to</p>
+<p>If you have successfully installed R and RStudio, have a look at this two video for a short introduction to R and RStudio. At the end you should be able to</p>
 <ul>
-<li>Open a code file,\\<br /></li>
-<li>Load data through the RStudio interface,\\<br /></li>
-<li>Highlight a line in the code,\\<br /></li>
+<li>Open a code file, </li>
+<li>Load data through the RStudio interface, </li>
+<li>Highlight a line in the code, </li>
 <li>Execute highlighted lines by clicking</li>
 </ul>
 <p>and be more or less familiar with the interface of RStudio</p>
 <ul>
-<li>where the code is,\\<br /></li>
-<li>where is the console/output,\\<br /></li>
+<li>where the code is, </li>
+<li>where is the console/output, </li>
 <li>where are the variables loaded in memory.</li>
 </ul>
 <p><a href="http://www.youtube.com/watch?feature=player_embedded&v=lVKMsaWju8w
@@ -61,12 +53,12 @@ alt="Getting started with R and RStudio" width="240" height="180" border="10" />
 alt="Introduction to R Programming: Getting Started With R (R Tutorial 1.1)" width="240" height="180" border="10" /></a></p>
 <p>You might also want to read Chapter 2 from <em>Humanities Data in R</em>.</p>
 <h1>Getting out of trouble</h1>
-<p>A great way of getting out of trouble is posting a question on the Q&amp;A\<br />website stackoverflow.com[<a href="http://stackoverflow.com/">http://stackoverflow.com/</a>]. You can post a\<br />question right now <a href="http://stackoverflow.com/questions/ask">here</a>. But\<br />before you do it, you might want to read this: <a href="http://stackoverflow.com/help/how-to-ask">How do I ask a good\<br />question?</a>.</p>
+<p>A great way of getting out of trouble is posting a question on the Q&amp;A website stackoverflow.com[<a href="http://stackoverflow.com/">http://stackoverflow.com/</a>]. You can post a question right now <a href="http://stackoverflow.com/questions/ask">here</a>. But before you do it, you might want to read this: <a href="http://stackoverflow.com/help/how-to-ask">How do I ask a good question?</a>.</p>
 <h1>Resources</h1>
 <ul>
-<li><a href="https://www.r-project.org/">The R Project</a>\\<br /></li>
-<li><a href="https://www.rstudio.com/">RStudio</a>\\<br /></li>
-<li>Arnold, T., &amp; Tilton, L. (2015). Humanities data in R: exploring\<br /> networks, geospatial data, images, and text. Cham: Springer.\<br /> <a href="http://dx.doi.org/10.1007/978-3-319-20702-5">http://dx.doi.org/10.1007/978-3-319-20702-5</a></li>
+<li><a href="https://www.r-project.org/">The R Project</a> </li>
+<li><a href="https://www.rstudio.com/">RStudio</a> </li>
+<li>Arnold, T., &amp; Tilton, L. (2015). Humanities data in R: exploring  networks, geospatial data, images, and text. Cham: Springer.  <a href="http://dx.doi.org/10.1007/978-3-319-20702-5">http://dx.doi.org/10.1007/978-3-319-20702-5</a></li>
 </ul>
 </body>
 </html>
