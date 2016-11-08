@@ -71,8 +71,8 @@ my_table <- table(my_hashtags)
 my_prop.table <- prop.table(my_table)
 View(my_prop.table)
 
+### Remove all `#smashedavo` hastags
 my_hashtags <- my_hashtags[-which(my_hashtags == '#smashedavo')]
-
 my_hashtags <- tolower(my_hashtags)
 my_table <- table(my_hashtags)
 my_prop.table <- prop.table(my_table)

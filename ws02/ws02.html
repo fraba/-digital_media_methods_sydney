@@ -1,0 +1,45 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <title>Workshop #2: Collect live Twitter data</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+<h1>Workshop #2: Collect live Twitter data</h1>
+<p>2 December 2016 @ 12-2pm</p>
+<p><em>We will keep updating this repository, so keep coming back...</em></p>
+
+<h2>What's an API</h2>
+
+<p>An Application Programming Interface (API) is a tap that an internet service such as Facebook or Twitter (but also Transport for NSW) decides to install to facilitate access to its data on large scale. In order to use an API, you usually need to register and receive a set of unique credentials. The credentials allow you to interrogate the API within the limits established by the service. For example, Google Maps has an API to geolocate a string of text (let's say <code>sydney opera house</code>)). The service it's free but limited to 2500 requests per day; if you need a higher limit, you pay.</p>
+
+<h3>Ok, let me try out this great Google Maps API in R (OPTIONAL)</h3>
+
+<p>
+<code>install.packages('ggmap')</code><br>
+<code>library(ggmap)</code><br>
+<code>geocode('sydney opera house')</code><br>
+</p>
+
+<p><code></code></p>
+
+<a name="get-twitter-api"></a><h2>How to get your credentials to access the Twitter API</h2>
+
+<ol>
+<li>Create a new Twitter account (even if you have a Twitter account it is better you create a new one dedicated to access the Twitter APIs);</li>
+<li>Login to the Twitter Developer site using your new Twitter account (dev.twitter.com/apps) <a href='https://dev.twitter.com/apps'>here</a>;</li>
+<li>Create a new app;</li>
+<li>Fill in the form;</li>
+<img src="https://github.com/fraba/digital_media_methods_sydney/raw/master/pic/twt-create-app1.jpg" alt="run-button" width="90%"/>
+<li>Create your Twitter application;</li>
+<li>In the page of the new application click on the tab `Keys and Access tokens`;</li>
+<img src="https://github.com/fraba/digital_media_methods_sydney/raw/master/pic/twt-create-app2.jpg" alt="run-button" width="90%"/>
+<li>Then on `Create my access token`;</li>
+<img src="https://github.com/fraba/digital_media_methods_sydney/raw/master/pic/twt-create-app3.jpg" alt="run-button" width="90%"/>
+<li>Done! Now you have all the four credentials you need: `Consumer Key (API Key)`, `Consumer Secret (API Secret)`, `	Access Token`, `Access Token Secret`.</li>
+<img src="https://github.com/fraba/digital_media_methods_sydney/raw/master/pic/twt-create-app4.jpg" alt="run-button" width="90%"/>
+</ol>
+
+</ul>
+</body>
+</html>
