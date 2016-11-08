@@ -68,7 +68,15 @@ my_hashtags <- unlist(my_list_of_hashtags)
 ### the case of each letter (or #AUSPOL will be counted separatly from #auspol)
 my_hashtags <- tolower(my_hashtags)
 my_table <- table(my_hashtags)
-View(my_table)
+my_prop.table <- prop.table(my_table)
+View(my_prop.table)
+
+my_hashtags <- my_hashtags[-which(my_hashtags == '#smashedavo')]
+
+my_hashtags <- tolower(my_hashtags)
+my_table <- table(my_hashtags)
+my_prop.table <- prop.table(my_table)
+View(my_prop.table)
 
 # >> MUCH HARDER STUFF BELOW << #
 
