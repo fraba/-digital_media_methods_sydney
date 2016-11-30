@@ -6,8 +6,17 @@ font-family:Georgia,serif;
 }
  
 p, li {
-font-family: "Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+font-family: "Palatino", "Helvetica Neue", "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
         font-size: 16px;
-        margin-top: .5em; color: #666;
+        color: #666; line-height: 20px;
 }
-code { font-family: monospace; }
+code { font-family: "Courier New" 
+                    Courier 
+                    monospace; 
+       background: #f9f9f9;
+               font-size: 16px;
+        color: #666; line-height: 20px;
+}
+body {
+    margin-left: 1cm;
+}

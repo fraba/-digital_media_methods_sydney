@@ -7,9 +7,16 @@
 <body>
 <h1>Workshop #2: Collect live Twitter data</h1>
 <p>2 December 2016 @ 12-2pm</p>
-<p><em>We will keep updating this repository, so keep coming back...</em></p>
 
-<h2>What's an API</h2>
+<h2>Contents</h2>
+<ol>
+  <li><a href='#api'>What's an API</a></li>
+  <li><a href='#loop'>What's a for-loop</a></li>
+  <li><a href='#code'>R Code</a></li>
+</ol>
+
+
+<h2><a name="api"></a>What's an API</h2>
 
 <p>An Application Programming Interface (API) is a tap that an internet service such as Facebook or Twitter (but also Transport for NSW) decides to install to facilitate access to its data on large scale. In order to use an API, you usually need to register and receive a set of unique credentials. The credentials allow you to interrogate the API within the limits established by the service. For example, Google Maps has an API to geolocate a string of text (let's say <code>sydney opera house</code>)). The service it's free but limited to 2500 requests per day; if you need a higher limit, you pay.</p>
 
@@ -45,11 +52,111 @@
 <img src="https://github.com/fraba/digital_media_methods_sydney/raw/master/pic/twt-create-app4.jpg" alt="run-button" width="90%"/>
 </ol>
 
+<h2><a name="loop"></a>What's a for-loop</h2>
+
+<p>A for-loop is such a key concept in  programming that it even has its own <a href ='https://en.wikipedia.org/wiki/For_loop' target = '_blank'>Wikipedia article.</a></p>
+<p>Simply, a for-loop repeats a task a number of times (possibly an infinite number of times). So let's say we have a task, which we can express by a list of elementary functions. Remember, a <i>function</i> is a predefined set of instructions that we execute by calling it with <code>myFunction()</code>; a function can optionally take <i>inputs</i> and result in an <i>output</i>. So we are sitting at our desk, next to a pile of papers, and our task is to mark all the papers. Let's think about <code>papers</code> as a vector containing a series of 100 objects (the students' papers). The functions we need to do the markings are basically two</p>
+
+<ol>
+  <li><code>readPaper()</code></li>
+  <li><code>markPaper()</code></li>
+</ol>
+
+<p>and we need to repeat it 100 times.</p>
+
+<p>A for-loop allows us to to exactly that. We take our papers (one by one) from the pile of <code>papers</code> and once marked we put them back in a different pile (let's called it <code>marked_papers</code>). This is how you would do your marking in R with a for-loop (remember that the symbol <code><-</code> assigns the output of a function to an object):</p>
+
+<code>
+  marked_papers <- character() <br> 
+  for (paper in papers) { <br>
+  &nbsp;idea_of_paper <- readPaper(paper) <br>
+  &nbsp;marked_paper <- markPaper(idea_of_paper) <br>
+  &nbsp;marked_papers <- c(marked_papers, marked_paper) <br>
+  } <br>
+</code>
+
+<p>Let's try to undestand this code. First, we already have the object <code>papers</code> but we need to create a new (empty) object to store our marked papers. You don't want to loose all your work! So, with the first line we create a new object character vector and we call it <code>marked_papers</code>.</p>
+<p>The actual loop starts on the second line. We declare the start of the loop with <code>for (...) {</code> and we close it with <code>}</code>. Everything within <code>{ ... }</code> will be repeated a number of times. Yes, but how many times? The instructions for our loop are <code>(paper in papers)</code>, which reads: "for every single <code>paper</code> in <code>papers</code> run the following lines". In other words, the number of iterations of the for-loop will depend on the number of objects contained in <code>papers</code>.</p>
+<p></p>
+<p>There is something imporant to understand here. An object <code>paper</code> is created at the beginning of each iteration (containing everytime a <i>different</i> paper). That is, the existence of <code>paper</code> is limited to the iteration. If you don't save it somewhere it will disappear. Nevertheless we are not interested in saving a copy of each <code>paper</code> (which is already contained in our <code>papers</code>) but only a copy of it once it has been marked (<code>marked_paper</code>). But again, at every iteration the line <code>marked_paper <- markPaper(idea_of_paper)</code> will replace any previously existing <code>marked_paper</code> with a new one. At the end of the for-loop, after 100 iterations, there will be only one <code>marked_paper</code> in memory: the last one. To store all papers we have marked we need to <i>combine</i> (with the function <code>c()</code>) each one into our vector <code>marked_papers</code>, which will be of lenght 0 at the beginning of the first iteration and of lenght 100 at the end of the last.</p>
+
+<h2><a name="code"></a>Code</h2>
+
+<p>The code is particularly dense this time. Additionally to the for-loop (which is a <b>controller</b> or control-flow contruct), we use <b>new packages</b>, new functions and we introduce some <b>logical operators</b>. The code for the next workshop is <a href="code/ws02_code.R">here</a>. Download the file and open it in <em>RStudio</em>.</p>
+
+<h3>Packages</h3>
+<ol>
+  <li><a href = "https://cran.r-project.org/web/packages/twitteR/twitteR.pdf" target = "_blank">twitterR</a> This package allows to get data directly from Twitter (API credentials needed)</li>
+  <li><a href = "https://cran.r-project.org/web/packages/tm/tm.pdf" target = "_blank">tm</a> This package is very popular to conduct text analysis in R (see <i><a href = 'https://cran.r-project.org/web/packages/tm/vignettes/tm.pdf' target = 'blank_'>Introduction to the tm Package:
+Text Mining in R</a></i>)</li>
+  <li><a href = "https://cran.r-project.org/web/packages/dplyr/dplyr.pdf" target = "_blank">dplyr</a> This package makes easy to manipulate data (see <i><a href = 'https://cran.rstudio.com/web/packages/dplyr/vignettes/introduction.html' target = '_blank'>Introduction to dplyr</a></i>)</li>
+  <li><a href = "https://cran.r-project.org/web/packages/ggplot2/ggplot2.pdf" target = "_blank">ggplot2</a> This package is probably the most popular graphic package in R (see <i><a href = 'http://opac.library.usyd.edu.au:80/record=b5373108~S4' target = '_blank'>ggplot2 Elegant Graphics for Data Analysis</a></i> [free access form opac.library.usyd.edu.au] and <i><a href = 'http://tutorials.iq.harvard.edu/R/Rgraphics/Rgraphics.html' target = '_blank'>Introduction to R Graphics with ggplot2</a></i>)</li>
+</ol>
+
+<h3>Operators</h3>
+
+<p>The two most common classes of operators are <b>relational operators</b> and <b>logical operators</b>.</p>
+
+<p>Relational operators are</p>
+
+<ul>
+  <li><code>x < y</code>, which tests if x is less than y</li>
+  <li><code>x > y</code>, which tests if x is more than y</li>
+  <li><code>x <= y</code>, which tests if x is less than or equal to y</li>
+  <li><code>x >= y</code>, which tests if x is more than or equal to y</li>
+  <li><code>x == y</code>, which tests if x is equal to y (different from <code>=</code>, which doesn't test anything but assign the value on the right-side of the sign to the variable on the left-side)</li> 
+  <li><code>x != y</code>, which tests if x is different from y</li>
 </ul>
+
+<p>The most common logical operators are</p>
+
+<ul>
+  <li><code>!</code>, which indicates logical negation</li>
+  <li><code>&</code>, which inidates logical AND</li>
+  <li><code>|</code>, which indicate logical NOT</li>
+</ul>
+
+<p>Let's start now by assigning to <code>variable</code> the value <code>5</code></p>
+
+<code>variable = 5</code>
+
+<p>Then let's run some tests using the <i>relational operators</i></p>
+
+<code>
+variable > 10 <br>
+# [1] FALSE <br>
+variable == 5 <br>
+# [1] TRUE <br>
+variable >= 5 <br>
+# [1] TRUE <br>
+variable != 5 <br>
+# [1] FALSE <br>
+</code>
+
+<p>Finally let's combine them with the <i>logical operators</i> (remember, the value of <code>variable</code> is <code>5</code>)</p>
+
+<code>
+!(variable == 5) <br>
+# [1] FALSE <br>
+(variable == 5) & (variable+1 < 6)<br>
+[1] FALSE <br>
+</code>
+<p>but</p>
+<code>
+(variable == 5) | (variable+1 < 6) <br>
+# [1] TRUE <br> </code>
+
+<h3>Controllers</h3>
+
+<p>Controllers (more precisely <i>control-flow constructs</i>) are fundamental in every programming language because allow the programmer to add conditions to the flow of the program. We already described the use of one controller (<code>for</code>). The other popular controller is <code>if</code> (which we can combine with <code>else</code>). </p>
+
+<code>
+  if (variable == 2) { <br>
+  &nbsp;doSomething() <br>
+  } else { <br>
+  &nbsp;doSomethingElse() <br>
+  } <br>
+  <code>
+
 </body>
-
-<h2>Code</h2>
-
-<p>The code for the next workshop is <a href="code/ws02_code.R">here</a>. Download the file and open it in <em>RStudio</em>.</p>
-
 </html>
