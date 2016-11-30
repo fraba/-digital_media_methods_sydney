@@ -94,6 +94,8 @@ for (tweet in timeline_results) {
 
 # There is a lot of discussion about how Trump uses Twitter. Let's replicate some analysis on the source
 # of Trump's tweets (which application was used to publish them)
+# If you are interested in a very detailed analysis on Trump and Twitter check out this:
+# http://varianceexplained.org/r/trump-tweets/
 # This is how the source is described in  the field `source`
 # <a href="http://twitter.com/download/android" rel="nofollow">Twitter for Android</a>
 # or
